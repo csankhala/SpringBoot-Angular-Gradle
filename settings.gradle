@@ -1,1 +1,2 @@
+include 'webapp'
 rootProject.name = 'SpringBoot-Angular-Gradle'
