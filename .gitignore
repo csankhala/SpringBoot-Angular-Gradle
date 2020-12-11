@@ -118,17 +118,3 @@ hs_err_pid*
 .idea/sonarIssues.xml
 .idea/vcs.xml
 .idea/workspace.xml
-webapp/.editorconfig
-webapp/.gitignore
-webapp/README.md
-webapp/angular.json
-webapp/browserslist
-webapp/e2e/
-webapp/karma.conf.js
-webapp/package-lock.json
-webapp/package.json
-webapp/src/
-webapp/tsconfig.app.json
-webapp/tsconfig.json
-webapp/tsconfig.spec.json
-webapp/tslint.json
