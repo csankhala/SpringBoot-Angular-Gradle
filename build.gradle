@@ -2,6 +2,9 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.4.0'
     id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+    id 'com.palantir.docker' version '0.25.0'
+    id 'com.palantir.docker-run' version '0.25.0'
+
 }
 
 group 'org.webapp'
@@ -14,4 +17,19 @@ repositories {
 dependencies {
     implementation project(':webapp')
     implementation 'org.springframework.boot:spring-boot-starter-web'
+}
+
+String imageName = "csankhala/${project.name.toLowerCase()}:$version"
+
+docker {
+    name imageName
+    files "build/libs/${bootJar.archiveFileName.get()}"
+    buildArgs([JAR_FILE: bootJar.archiveFileName.get()])
+}
+
+dockerRun {
+    name project.name
+    image imageName
+    ports '8080:8080'
+    clean true
 }
