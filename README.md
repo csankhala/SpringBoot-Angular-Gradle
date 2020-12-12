@@ -1,5 +1,5 @@
 # SpringBoot-Angular-Gradle
-This is skeleton project for Spring Boot + Angular Implementation with Gradle
+This is skeleton project implemented with Spring Boot, Angular, Gradle, Docker 
 
 # Run using Gradle
 ```
